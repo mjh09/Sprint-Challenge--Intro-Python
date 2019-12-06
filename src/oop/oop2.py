@@ -4,6 +4,9 @@
 # object is constructed.
 
 class GroundVehicle():
+    """
+    this is a base class for ground vehicles and their behaviors/attributes
+    """
     def __init__(self, num_wheels=4):
         self.num_wheels = num_wheels
 
@@ -19,12 +22,16 @@ class GroundVehicle():
 # Override the drive() method in Motorcycle so that it returns "BRAAAP!!"
 
 class Motorcycle(GroundVehicle):
+    """
+    child class for motorcylce object inheriting from ground vehicle
+    """
     def __init__(self):
         super().__init__()
         self.num_wheels = 2
         
     def drive(self):
         return "BRAAAP!!"
+
 
 vehicles = [
     GroundVehicle(),
